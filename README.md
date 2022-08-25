@@ -1,6 +1,8 @@
 
 教程地址：http://cppcms.com/sql/cppdb/index.html
 
+因CPPDB 无人维护，目前无法直接和Mariadb对接。也不能支持c++17 此存储库，修改0.3.1版本，提供对c++17 mariadb后端的支持。
+
 CppDB - SQL Connectivity Library
 CppDB is an SQL connectivity library that is designed to provide platform and Database independent connectivity API similarly to what JDBC, ODBC and other connectivity libraries do.
 
