@@ -1,0 +1,17 @@
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/cppdb_sqlite3.dir
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/cppdb_sqlite3-static.dir
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/cppdb_mariadb.dir
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/cppdb_mariadb-static.dir
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/cppdb.dir
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/cppdb-static.dir
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/test_perf.dir
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/test_basic.dir
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/test_backend.dir
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/test_caching.dir
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/example.dir
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/list_install_components.dir
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/install.dir
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/install/local.dir
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/install/strip.dir

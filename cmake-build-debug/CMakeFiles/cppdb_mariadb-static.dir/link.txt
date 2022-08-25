@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libcppdb_mariadb.a "CMakeFiles/cppdb_mariadb-static.dir/drivers/mariadb_backend.cpp.o"
+/Library/Developer/CommandLineTools/usr/bin/ranlib libcppdb_mariadb.a

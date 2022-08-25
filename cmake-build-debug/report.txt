@@ -1,0 +1,22 @@
+Testing drivers collection
+Testing connection pooling
+Failed in 78 dummy::connections==2
+Failed in 80 dummy::connections==2
+Failed in 84 dummy::connections==2
+Failed in 86 dummy::connections==2
+Failed in 90 dummy::connections==2
+Failed in 93 dummy::connections==2
+Failed in 97 dummy::connections==1
+Failed in 100 dummy::connections==1
+Failed in 105 dummy::connections==0
+Failed in 106 dummy::drivers==0
+Failed in 132 dummy::statements==4
+Failed in 135 dummy::statements==3
+Failed in 137 dummy::statements==3
+Failed in 139 dummy::statements==0
+Failed in 143 dummy::statements==1
+Failed in 145 dummy::statements==2
+Failed in 147 dummy::statements==3
+Failed in 150 dummy::statements==2
+Tests: 47 failed: 18
+Fail!

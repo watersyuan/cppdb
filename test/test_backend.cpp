@@ -144,6 +144,9 @@ void test2(cppdb::ref_ptr<cppdb::backend::connection> sql)
 	else if(sql->engine() == "mysql") {
 		stmt = sql->prepare("create table test ( id integer primary key auto_increment not null, n integer)");
 	}
+    else if(sql->engine() == "mariadb") {
+        stmt = sql->prepare("create table test ( id integer primary key auto_increment not null, n integer)");
+    }
 	else if(sql->engine() == "postgresql" )  {
 		stmt = sql->prepare("create table test ( id  serial  primary key not null, n integer)");
 	}
@@ -187,7 +190,9 @@ void test3(cppdb::ref_ptr<cppdb::backend::connection> sql)
 		stmt = sql->prepare("create table test ( i bigint, r real, t datetime, s varchar(5000), bl varbinary(max))");
 	else if(sql->engine() == "mysql") 
 		stmt = sql->prepare("create table test ( i bigint, r real, t datetime default null, s varchar(5000), bl blob) Engine = innodb");
-	else if(sql->engine() == "postgresql") {
+    else if(sql->engine() == "mariadb")
+        stmt = sql->prepare("create table test ( i bigint, r real, t datetime default null, s varchar(5000), bl blob) Engine = innodb");
+    else if(sql->engine() == "postgresql") {
 		if(pq_oid) {
 			stmt = sql->prepare("create table test ( i bigint, r real, t timestamp, s varchar(5000), bl oid)");
 			stmt->exec();
@@ -209,6 +214,8 @@ void test3(cppdb::ref_ptr<cppdb::backend::connection> sql)
 	stmt->exec();
 	if(sql->engine()=="mssql")
 		stmt = sql->prepare("insert into test values(?,?,?,?,cast(? as varbinary(max)))");
+    else if(sql->engine()=="mariadb")
+        stmt = sql->prepare("insert into test values(?,?,?,?,cast(? as varbinary(max)))");
 	else if(test_blob)
 		stmt = sql->prepare("insert into test values(?,?,?,?,?)");
 	else 
@@ -246,7 +253,8 @@ void test3(cppdb::ref_ptr<cppdb::backend::connection> sql)
 		stmt = sql->prepare("select i,r,t,s from test");
 	res = stmt->query();
 	{
-		TEST(res->cols()==test_blob ? 5 : 4);
+        int ___t = test_blob ? 5 : 4;
+		TEST(res->cols()== ___t);
 		TEST(res->column_to_name(0)=="i");
 		TEST(res->column_to_name(1)=="r");
 		TEST(res->column_to_name(2)=="t");

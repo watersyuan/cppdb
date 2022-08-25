@@ -72,6 +72,10 @@ int main(int argc,char **argv)
 			sql<<	"create table test ( id integer primary key auto_increment not null, "
 				"n integer, f real , t timestamp ,name text )" << cppdb::exec;
 		}
+        else if(sql.engine() == "mariadb") {
+            sql<<	"create table test ( id integer primary key auto_increment not null, "
+                     "n integer, f real , t timestamp ,name text )" << cppdb::exec;
+        }
 		else if(sql.engine() == "postgresql" )  {
 			sql<<	"create table test ( id  serial  primary key not null "
 				",n integer, f double precision , t timestamp ,name text )" << cppdb::exec;

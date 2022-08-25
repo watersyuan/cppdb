@@ -241,6 +241,11 @@ namespace cppdb {
 				driver_manager::instance().install_driver(
 					"mysql",new backend::static_driver(cppdb_mysql_get_connection)
 				);
+                #endif
+                #ifdef CPPDB_WITH_MARIADB
+				driver_manager::instance().install_driver(
+					"mariadb",new backend::static_driver(cppdb_mariadb_get_connection)
+				);
 				#endif
 			}
 			

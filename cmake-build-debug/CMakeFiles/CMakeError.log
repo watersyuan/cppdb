@@ -1,0 +1,93 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lSystem
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lc++
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Performing C++ SOURCE FILE Test CPPDB_HAVE_GCC_BITS_EXCHANGE_AND_ADD failed with the following output:
+Change Dir: /Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6f84a/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6f84a.dir/build.make CMakeFiles/cmTC_6f84a.dir/build
+Building CXX object CMakeFiles/cmTC_6f84a.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCPPDB_HAVE_GCC_BITS_EXCHANGE_AND_ADD  -std=c++17  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_6f84a.dir/src.cxx.o -MF CMakeFiles/cmTC_6f84a.dir/src.cxx.o.d -o CMakeFiles/cmTC_6f84a.dir/src.cxx.o -c /Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:1:10: fatal error: 'bits/atomicity.h' file not found
+#include <bits/atomicity.h> 
+         ^~~~~~~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_6f84a.dir/src.cxx.o] Error 1
+make: *** [cmTC_6f84a/fast] Error 2
+
+
+Source file was:
+#include <bits/atomicity.h> 
+	using __gnu_cxx::__exchange_and_add;
+	int main(){ volatile int x=0; return __exchange_and_add(&x,1);}
+Performing C++ SOURCE FILE Test CPPDB_HAVE_GCC_EXT_EXCHANGE_AND_ADD failed with the following output:
+Change Dir: /Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c0fef/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_c0fef.dir/build.make CMakeFiles/cmTC_c0fef.dir/build
+Building CXX object CMakeFiles/cmTC_c0fef.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCPPDB_HAVE_GCC_EXT_EXCHANGE_AND_ADD  -std=c++17  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_c0fef.dir/src.cxx.o -MF CMakeFiles/cmTC_c0fef.dir/src.cxx.o.d -o CMakeFiles/cmTC_c0fef.dir/src.cxx.o -c /Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:1:10: fatal error: 'ext/atomicity.h' file not found
+#include <ext/atomicity.h> 
+         ^~~~~~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_c0fef.dir/src.cxx.o] Error 1
+make: *** [cmTC_c0fef/fast] Error 2
+
+
+Source file was:
+#include <ext/atomicity.h> 
+	using __gnu_cxx::__exchange_and_add;
+	int main(){ volatile int x=0; return __exchange_and_add(&x,1);}
+Performing C++ SOURCE FILE Test CPPDB_HAVE_FREEBSD_ATOMIC failed with the following output:
+Change Dir: /Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b1733/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b1733.dir/build.make CMakeFiles/cmTC_b1733.dir/build
+Building CXX object CMakeFiles/cmTC_b1733.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCPPDB_HAVE_FREEBSD_ATOMIC  -std=c++17  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_b1733.dir/src.cxx.o -MF CMakeFiles/cmTC_b1733.dir/src.cxx.o.d -o CMakeFiles/cmTC_b1733.dir/src.cxx.o -c /Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:2:11: fatal error: 'machine/atomic.h' file not found
+        #include <machine/atomic.h>
+                 ^~~~~~~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_b1733.dir/src.cxx.o] Error 1
+make: *** [cmTC_b1733/fast] Error 2
+
+
+Source file was:
+#include <sys/types.h>
+	#include <machine/atomic.h>
+	int main() { volatile unsigned v=0; return atomic_cmpset_int(&v,1,0); }
+Performing C++ SOURCE FILE Test CPPDB_HAVE_SOLARIS_ATOMIC failed with the following output:
+Change Dir: /Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_75cb3/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_75cb3.dir/build.make CMakeFiles/cmTC_75cb3.dir/build
+Building CXX object CMakeFiles/cmTC_75cb3.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCPPDB_HAVE_SOLARIS_ATOMIC  -std=c++17  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_75cb3.dir/src.cxx.o -MF CMakeFiles/cmTC_75cb3.dir/src.cxx.o.d -o CMakeFiles/cmTC_75cb3.dir/src.cxx.o -c /Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+/Users/waters/Desktop/dev/cppdb/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:1:10: fatal error: 'atomic.h' file not found
+#include <atomic.h>
+         ^~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_75cb3.dir/src.cxx.o] Error 1
+make: *** [cmTC_75cb3/fast] Error 2
+
+
+Source file was:
+#include <atomic.h>
+	int main() { volatile unsigned v=0; return atomic_add_int_nv(&v,1); }

@@ -1,5 +1,6 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.22)
 project(cppdb)
+
 
 set(CPPDB_MAJOR 0)
 set(CPPDB_MINOR 3)
@@ -18,12 +19,14 @@ add_definitions(
 option(DISABLE_SQLITE	"Link sqlite3 backend into the libcppdb" OFF)
 option(DISABLE_PQ 	"Link postgresql backend into the libcppdb" OFF)
 option(DISABLE_MYSQL	"Link mysql backend into the libcppdb" OFF)
+option(DISABLE_MARIADB	"Link mariadb backend into the libcppdb" OFF)
 option(DISABLE_ODBC	"Link odbc backend into the libcppdb" OFF)
 
 
 option(SQLITE_BACKEND_INTERNAL	"Link sqlite3 backend into the libcppdb" OFF)
 option(PQ_BACKEND_INTERNAL 	"Link postgresql backend into the libcppdb" OFF)
 option(MYSQL_BACKEND_INTERNAL	"Link mysql backend into the libcppdb" OFF)
+option(MARIADB_BACKEND_INTERNAL	"Link mysql backend into the libcppdb" OFF)
 option(ODBC_BACKEND_INTERNAL	"Link odbc backend into the libcppdb" ON)
 
 if(NOT LIBDIR)
@@ -58,6 +61,7 @@ if(NOT WIN32)
 	find_library(PTHREAD_LIB pthread NAMES thr kse)
 endif()
 
+
 if(CMAKE_COMPILER_IS_GNUCXX)
 	set(CXX_FLAGS "-Wall -Wextra")
 	if(CMAKE_SYSTEM_NAME STREQUAL "SunOS")
@@ -73,7 +77,7 @@ elseif(CMAKE_CXX_COMPILER_ID STREQUAL "SunPro")
 	endif()
 endif()
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${CXX_FLAGS}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${CXX_FLAGS} -std=c++17")
 
 
 check_cxx_source_compiles(
@@ -195,6 +199,7 @@ if(NOT DISABLE_PQ)
 	endif()
 endif()
 
+
 if(NOT DISABLE_MYSQL)
 	find_library(MYSQL_LIB mysqlclient)
 	find_path(MYSQL_PATH mysql.h PATH_SUFFIXES mysql)
@@ -214,8 +219,40 @@ if(NOT DISABLE_MYSQL)
 		message("-- mysqlclient not found, disableing mysql backend")
 	endif()
 endif()
+set(CMAKE_INCLUDE_PATH /usr/local/Cellar/mariadb-connector-c/3.3.1/include/mariadb)
+set(CMAKE_LIBRARY_PATH /usr/local/Cellar/mariadb-connector-c/3.3.1/lib/mariadb)
+if(NOT DISABLE_MARIADB)
+	find_library(MARIADB_LIB mariadbclient)
+	find_path(MARIADB_PATH mysql.h )
+	if(MARIADB_LIB AND MARIADB_PATH)
+		include_directories(${MARIADB_PATH})
+		if(MARIADB_BACKEND_INTERNAL)
+			set(INTERNAL_SOURCES ${INTERNAL_SOURCES} drivers/mariadb_backend.cpp)
+			set(INTERNAL_LIBRARIES ${INTERNAL_LIBRARIES} ${MARIADB_LIB})
+			add_definitions(-DCPPDB_WITH_MARIADB)
+		else()
+			add_library(cppdb_mariadb SHARED drivers/mariadb_backend.cpp)
+			add_library(cppdb_mariadb-static STATIC drivers/mariadb_backend.cpp)
+			target_link_libraries(cppdb_mariadb ${MARIADB_LIB})
+			set(BACKEND_LIBRARIES ${BACKEND_LIBRARIES} cppdb_mariadb)
+		endif()
+	else()
+		message("-- mariadbclient not found, disableing mariadb backend")
+	endif()
+endif()
 
-
+set(CMAKE_INCLUDE_PATH /usr/local/Cellar/openssl@1.1/1.1.1q/include)
+set(CMAKE_LIBRARY_PATH /usr/local/Cellar/openssl@1.1/1.1.1q/lib)
+find_package(OpenSSL)
+if (OpenSSL_FOUND)
+	target_link_libraries(cppdb_mariadb OpenSSL::SSL OpenSSL::Crypto)
+endif (OpenSSL_FOUND)
+set(CMAKE_INCLUDE_PATH /usr/local/Cellar/zlib/1.2.12/include)
+set(CMAKE_LIBRARY_PATH /usr/local/Cellar/zlib/1.2.12/lib)
+find_package(ZLIB)
+if (ZLIB_FOUND)
+	target_link_libraries(cppdb_mariadb Z)
+endif (ZLIB_FOUND)
 # Main library configuration
 
 set(CPPDB_SRC
@@ -242,6 +279,7 @@ if(NOT WIN32)
 	target_link_libraries(cppdb ${PTHREAD_LIB})
 endif()
 
+
 # Link and backends configuration
 
 set(INST_LIBS)
@@ -258,7 +296,7 @@ foreach(LIB ${BACKEND_LIBRARIES} cppdb)
 		set_target_properties(${LIB} PROPERTIES VERSION ${CPPDB_VERSION} SOVERSION ${CPPDB_SOVERSION})
 	endif()
 
-    
+
 	set_target_properties(${LIB} PROPERTIES CLEAN_DIRECT_OUTPUT 1)
 	set_target_properties(${LIB} PROPERTIES OUTPUT_NAME "${LIB}")
 	set_target_properties(${LIB}-static PROPERTIES CLEAN_DIRECT_OUTPUT 1)
@@ -293,6 +331,8 @@ target_link_libraries(test_basic cppdb)
 target_link_libraries(test_backend cppdb)
 target_link_libraries(test_caching cppdb)
 target_link_libraries(example cppdb)
+
+
 
 install(TARGETS ${INST_LIBS} 
 	RUNTIME DESTINATION bin

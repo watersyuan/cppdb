@@ -1,0 +1,151 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-RelWithDebInfo-e8e13aa7b7f6db571e24.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "cppdb",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "cppdb::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cppdb-RelWithDebInfo-3b5a122b5f5175244768.json",
+					"name" : "cppdb",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cppdb-static::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cppdb-static-RelWithDebInfo-e66abec8a0da302f926f.json",
+					"name" : "cppdb-static",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cppdb_mariadb::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cppdb_mariadb-RelWithDebInfo-6cdd1c1da2e7a02e9e17.json",
+					"name" : "cppdb_mariadb",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cppdb_mariadb-static::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cppdb_mariadb-static-RelWithDebInfo-e750e8b46b4da6dc3461.json",
+					"name" : "cppdb_mariadb-static",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cppdb_sqlite3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cppdb_sqlite3-RelWithDebInfo-f639c83c012d787783ad.json",
+					"name" : "cppdb_sqlite3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cppdb_sqlite3-static::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cppdb_sqlite3-static-RelWithDebInfo-eab2180f47699f988371.json",
+					"name" : "cppdb_sqlite3-static",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "example::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-example-RelWithDebInfo-545954e1b4f5a9756c82.json",
+					"name" : "example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_backend::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_backend-RelWithDebInfo-57221c45f8cedc6f9f2b.json",
+					"name" : "test_backend",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_basic::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_basic-RelWithDebInfo-038748c7bda2a7896a74.json",
+					"name" : "test_basic",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_caching::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_caching-RelWithDebInfo-157ce3d495b20d5a976c.json",
+					"name" : "test_caching",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_perf::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_perf-RelWithDebInfo-25d58ea326fc7a6c5653.json",
+					"name" : "test_perf",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/waters/Desktop/dev/cppdb/cmake-build-debug",
+		"source" : "/Users/waters/Desktop/dev/cppdb"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

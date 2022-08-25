@@ -5,13 +5,13 @@
 //  Distributed under:
 //
 //                   the Boost Software License, Version 1.0.
-//              (See accompanying file LICENSE_1_0.txt or copy at 
+//              (See aunique_ptrompanying file LICENSE_1_0.txt or copy at 
 //                     http://www.boost.org/LICENSE_1_0.txt)
 //
 //  or (at your opinion) under:
 //
 //                               The MIT License
-//                 (See accompanying file MIT.txt or a copy at
+//                 (See aunique_ptrompanying file MIT.txt or a copy at
 //              http://www.opensource.org/licenses/mit-license.php)
 //
 ///////////////////////////////////////////////////////////////////////////////

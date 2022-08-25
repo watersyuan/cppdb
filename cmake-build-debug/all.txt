@@ -1,0 +1,349 @@
+Fail cppdb::driver failed to load driver postgresql - no module found
+Last tested line 0
+Tests: 1 failed: 1
+Fail!
+Testing CppDB version `0.3.1' 301
+ERROR: cppdb::driver failed to load driver postgresql - no module found
+Fail cppdb::driver failed to load driver postgresql - no module found
+Last tested line 0
+Tests: 1 failed: 1
+Fail!
+Testing CppDB version `0.3.1' 301
+ERROR: cppdb::driver failed to load driver postgresql - no module found
+Fail cppdb::driver failed to load driver postgresql - no module found
+Last tested line 0
+Tests: 1 failed: 1
+Fail!
+Testing CppDB version `0.3.1' 301
+ERROR: cppdb::driver failed to load driver postgresql - no module found
+Fail cppdb::driver failed to load driver postgresql - no module found
+Last tested line 0
+Tests: 1 failed: 1
+Fail!
+Testing CppDB version `0.3.1' 301
+ERROR: cppdb::driver failed to load driver postgresql - no module found
+Basic setup
+Basic select 
+Unicode Test
+Testing sequences types
+Catched exception table test already exists
+Last tested line 121
+Testing data types
+Catched exception table test already exists
+Last tested line 121
+Tesing transactions
+Catched exception table test has no column named i
+Last tested line 121
+Tesing variable length data handing: text
+Catched exception sqlite3:cannot start a transaction within a transaction
+Last tested line 121
+Tesing variable length data handing: blob
+Catched exception sqlite3:cannot start a transaction within a transaction
+Last tested line 121
+Testing integer ranges
+- short
+Catched exception table test has no column named i
+Last tested line 121
+Testing conversions on fetch
+- string to integer
+Catched exception table test has no column named s
+Last tested line 121
+Testing conversions on bind
+- integer to string
+Catched exception table test has no column named s
+Last tested line 121
+Tests: 28 failed: 8
+Fail!
+Testing CppDB version `0.3.1' 301
+Basic setup
+Basic select 
+libc++abi: Pure virtual function called!
+Testing CppDB version `0.3.1' 301
+Thu Aug 25 16:43:19 2022
+ID: 1, Affected rows 1
+ID: 2, Affected rows 1
+1 10 3.14159 Hello 'World' Thu Aug 25 16:43:19 2022
+
+2 10 -1 Hello 'World' Thu Aug 25 16:43:19 2022
+
+Deleted 2 rows
+Ok
+Basic setup
+Testing CppDB version `0.3.1' 301
+Thu Aug 25 16:43:19 2022
+ID: 1, Affected rows 1
+ID: 2, Affected rows 1
+1 10 3.14159 Hello 'World' Thu Aug 25 16:43:19 2022
+
+2 10 -1 Hello 'World' Thu Aug 25 16:43:19 2022
+
+Deleted 2 rows
+Ok
+Basic setup
+Basic select 
+Unicode Test
+Testing sequences types
+Catched exception table test already exists
+Last tested line 121
+Testing data types
+Catched exception table test already exists
+Last tested line 121
+Tesing transactions
+Catched exception table test has no column named i
+Last tested line 121
+Tesing variable length data handing: text
+Catched exception sqlite3:cannot start a transaction within a transaction
+Last tested line 121
+Tesing variable length data handing: blob
+Catched exception sqlite3:cannot start a transaction within a transaction
+Last tested line 121
+Testing integer ranges
+- short
+Catched exception table test has no column named i
+Last tested line 121
+Testing conversions on fetch
+- string to integer
+Catched exception table test has no column named s
+Last tested line 121
+Testing conversions on bind
+- integer to string
+Catched exception table test has no column named s
+Last tested line 121
+Tests: 28 failed: 8
+Fail!
+Testing CppDB version `0.3.1' 301
+Thu Aug 25 16:43:19 2022
+ID: 1, Affected rows 1
+ID: 2, Affected rows 1
+1 10 3.14159 Hello 'World' Thu Aug 25 16:43:19 2022
+
+2 10 -1 Hello 'World' Thu Aug 25 16:43:19 2022
+
+Deleted 2 rows
+Ok
+Fail cppdb::driver failed to load driver mysql - no module found
+Last tested line 0
+Tests: 1 failed: 1
+Fail!
+Testing CppDB version `0.3.1' 301
+ERROR: cppdb::driver failed to load driver mysql - no module found
+Fail cppdb::driver failed to load driver mysql - no module found
+Last tested line 0
+Tests: 1 failed: 1
+Fail!
+Testing CppDB version `0.3.1' 301
+ERROR: cppdb::driver failed to load driver mysql - no module found
+Fail cppdb::driver failed to load driver mysql - no module found
+Last tested line 0
+Tests: 1 failed: 1
+Fail!
+Testing CppDB version `0.3.1' 301
+ERROR: cppdb::driver failed to load driver mysql - no module found
+Fail cppdb::driver failed to load driver mysql - no module found
+Last tested line 0
+Tests: 1 failed: 1
+Fail!
+Testing CppDB version `0.3.1' 301
+ERROR: cppdb::driver failed to load driver mysql - no module found
+Basic setup
+Basic select 
+Unicode Test
+Testing sequences types
+Testing data types
+Tesing transactions
+Tesing variable length data handing: text
+Tesing variable length data handing: blob
+Testing integer ranges
+- short
+- int
+- unsigned short,int,long,long long
+Testing floating -> integer conversions
+Testing conversions on fetch
+- string to integer
+- string to date-time
+- integer to string
+Testing conversions on bind
+- integer to string
+- date-time to string
+- string to date-time
+Tests: 285 failed: 0
+Ok
+Testing CppDB version `0.3.1' 301
+Thu Aug 25 16:43:20 2022
+ID: 1, Affected rows 1
+ID: 2, Affected rows 1
+1 10 3.14159 Hello 'World' Thu Aug 25 16:43:20 2022
+
+2 10 -1 Hello 'World' Thu Aug 25 16:43:20 2022
+
+Deleted 2 rows
+Ok
+Basic setup
+Basic select 
+Unicode Test
+Testing sequences types
+Testing data types
+Tesing transactions
+Tesing variable length data handing: text
+Tesing variable length data handing: blob
+Testing integer ranges
+- short
+- int
+- unsigned short,int,long,long long
+Testing floating -> integer conversions
+Testing conversions on fetch
+- string to integer
+- string to date-time
+- integer to string
+Testing conversions on bind
+- integer to string
+- date-time to string
+- string to date-time
+Tests: 285 failed: 0
+Ok
+Testing CppDB version `0.3.1' 301
+Thu Aug 25 16:43:20 2022
+ID: 1, Affected rows 1
+ID: 2, Affected rows 1
+1 10 3.14159 Hello 'World' Thu Aug 25 16:43:20 2022
+
+2 10 -1 Hello 'World' Thu Aug 25 16:43:20 2022
+
+Deleted 2 rows
+Ok
+Basic setup
+Basic select 
+Unicode Test
+Testing sequences types
+Testing data types
+Tesing transactions
+Tesing variable length data handing: text
+Tesing variable length data handing: blob
+Testing integer ranges
+- short
+- int
+- unsigned short,int,long,long long
+Testing floating -> integer conversions
+Testing conversions on fetch
+- string to integer
+- string to date-time
+- integer to string
+Testing conversions on bind
+- integer to string
+- date-time to string
+- string to date-time
+Tests: 285 failed: 0
+Ok
+Testing CppDB version `0.3.1' 301
+Thu Aug 25 16:43:20 2022
+ID: 1, Affected rows 1
+ID: 2, Affected rows 1
+1 10 3.14159 Hello 'World' Thu Aug 25 16:43:20 2022
+
+2 10 -1 Hello 'World' Thu Aug 25 16:43:20 2022
+
+Deleted 2 rows
+Ok
+Basic setup
+Basic select 
+Unicode Test
+Testing sequences types
+Testing data types
+Tesing transactions
+Tesing variable length data handing: text
+Tesing variable length data handing: blob
+Testing integer ranges
+- short
+- int
+- unsigned short,int,long,long long
+Testing floating -> integer conversions
+Testing conversions on fetch
+- string to integer
+- string to date-time
+- integer to string
+Testing conversions on bind
+- integer to string
+- date-time to string
+- string to date-time
+Tests: 285 failed: 0
+Ok
+Testing CppDB version `0.3.1' 301
+Thu Aug 25 16:43:21 2022
+ID: 1, Affected rows 1
+ID: 2, Affected rows 1
+1 10 3.14159 Hello 'World' Thu Aug 25 16:43:21 2022
+
+2 10 -1 Hello 'World' Thu Aug 25 16:43:21 2022
+
+Deleted 2 rows
+Ok
+Fail cppdb::driver failed to load driver odbc - no module found
+Last tested line 0
+Tests: 1 failed: 1
+Fail!
+Testing CppDB version `0.3.1' 301
+ERROR: cppdb::driver failed to load driver odbc - no module found
+Fail cppdb::driver failed to load driver odbc - no module found
+Last tested line 0
+Tests: 1 failed: 1
+Fail!
+Testing CppDB version `0.3.1' 301
+ERROR: cppdb::driver failed to load driver odbc - no module found
+Fail cppdb::driver failed to load driver odbc - no module found
+Last tested line 0
+Tests: 1 failed: 1
+Fail!
+Testing CppDB version `0.3.1' 301
+ERROR: cppdb::driver failed to load driver odbc - no module found
+Fail cppdb::driver failed to load driver odbc - no module found
+Last tested line 0
+Tests: 1 failed: 1
+Fail!
+Testing CppDB version `0.3.1' 301
+ERROR: cppdb::driver failed to load driver odbc - no module found
+Fail cppdb::driver failed to load driver odbc - no module found
+Last tested line 0
+Tests: 1 failed: 1
+Fail!
+Testing CppDB version `0.3.1' 301
+ERROR: cppdb::driver failed to load driver odbc - no module found
+Fail cppdb::driver failed to load driver odbc - no module found
+Last tested line 0
+Tests: 1 failed: 1
+Fail!
+Testing CppDB version `0.3.1' 301
+ERROR: cppdb::driver failed to load driver odbc - no module found
+Fail cppdb::driver failed to load driver odbc - no module found
+Last tested line 0
+Tests: 1 failed: 1
+Fail!
+Testing CppDB version `0.3.1' 301
+ERROR: cppdb::driver failed to load driver odbc - no module found
+Fail cppdb::driver failed to load driver odbc - no module found
+Last tested line 0
+Tests: 1 failed: 1
+Fail!
+Testing CppDB version `0.3.1' 301
+ERROR: cppdb::driver failed to load driver odbc - no module found
+Testing drivers collection
+Testing connection pooling
+Failed in 78 dummy::connections==2
+Failed in 80 dummy::connections==2
+Failed in 84 dummy::connections==2
+Failed in 86 dummy::connections==2
+Failed in 90 dummy::connections==2
+Failed in 93 dummy::connections==2
+Failed in 97 dummy::connections==1
+Failed in 100 dummy::connections==1
+Failed in 105 dummy::connections==0
+Failed in 106 dummy::drivers==0
+Failed in 132 dummy::statements==4
+Failed in 135 dummy::statements==3
+Failed in 137 dummy::statements==3
+Failed in 139 dummy::statements==0
+Failed in 143 dummy::statements==1
+Failed in 145 dummy::statements==2
+Failed in 147 dummy::statements==3
+Failed in 150 dummy::statements==2
+Tests: 47 failed: 18
+Fail!

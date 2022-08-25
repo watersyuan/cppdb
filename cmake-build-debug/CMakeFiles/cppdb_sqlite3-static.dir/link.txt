@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libcppdb_sqlite3.a "CMakeFiles/cppdb_sqlite3-static.dir/drivers/sqlite3_backend.cpp.o"
+/Library/Developer/CommandLineTools/usr/bin/ranlib libcppdb_sqlite3.a
